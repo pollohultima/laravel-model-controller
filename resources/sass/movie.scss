@@ -1,4 +1,41 @@
+
+h1{
+    text-align: center;
+    margin-top: 4rem;
+}
+
 .container{
     width: 75%;
     margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+    .movie_card{
+        width: 20%;
+        margin: 1rem;
+        padding: 1rem;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 10px;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.568);
+
+        h3{
+            text-align: center;
+        }
+
+        h4{
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+
+        p{
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+    }
 }

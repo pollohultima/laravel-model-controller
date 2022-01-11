@@ -12,32 +12,37 @@
 
     <section class="movie">
         <div class="container">
-            <div class="row">
 
 
-            </div>
 
 
+
+            @foreach ($movies as $movie)
+                <div class="movie_card">
+                    <h3>{{ $movie->title }}</h3>
+                    <div>
+                        <h4>Original title:</h4>
+                        <p>
+                            {{ $movie->original_title }}
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4>Nationality:</h4>
+                        <p>{{ $movie->nationality }}</p>
+                    </div>
+                    <div>
+                        <h4>Date:</h4>
+                        <p>{{ $movie->date }}</p>
+                    </div>
+                    <div>
+                        <h4>Vote:</h4>
+                        <p>{{ $movie->vote }}</p>
+                    </div>
+
+                </div>
+            @endforeach
         </div>
-        @foreach ($movies as $movie)
-            <div class="movie_card">
-                <h4>{{ $movie->title }}</h4>
-                <h6>Original title:{{ $movie->original_title }}</h6>
-                <div>
-                    <h6>Nationality:</h6>
-                    <p>{{ $movie->nationality }}</p>
-                </div>
-                <div>
-                    <h6>Date:</h6>
-                    <p>{{ $movie->date }}</p>
-                </div>
-                <div>
-                    <h6>Vote:</h6>
-                    <p>{{ $movie->vote }}</p>
-                </div>
-
-            </div>
-        @endforeach
     </section>
 
 @endsection
